@@ -1,106 +1,44 @@
-/* Reset de estilos */
-* {
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos generales */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
-}
-
 header {
     background-color: #333;
-    color: white;
+    color: #fff;
     text-align: center;
+    padding: 1em 0;
+}
+
+main {
     padding: 20px;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav li {
-    display: inline;
-    margin-right: 20px;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-/* Estilos para el contenido principal */
-#mainContent {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 20px;
-}
-
-/* Estilos para los widgets */
-.widget {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+#personalizacion {
     margin-bottom: 20px;
 }
 
-#introWidget {
-    text-align: center;
-}
-
-#quoteWidget {
-    text-align: center;
-}
-
-/* Estilos para la lista de películas */
-#movieList {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    margin: 20px;
-}
-
-.movie {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilos adicionales para interacciones */
-.alternate-color {
-    filter: hue-rotate(90deg);
-}
-
-.hidden {
-    display: none;
-}
-
-/* Estilos para la página de detalles */
-#movieDetail {
-    text-align: center;
-    margin: 20px;
-}
-
-/* Estilos para los botones */
 button {
     padding: 10px;
-    margin: 5px;
+    font-size: 16px;
     cursor: pointer;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #555;
+#peliculas {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tarjeta-pelicula {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+}
+
+.tarjeta-pelicula img {
+    width: 100%;
+    height: auto;
 }

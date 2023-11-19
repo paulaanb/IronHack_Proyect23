@@ -1,93 +1,58 @@
-// Definición de un módulo para el manejo del catálogo
-const CatalogModule = (function () {
-    // Variables privadas
-    let movies = [];
-
-    // Funciones privadas
-    function renderMovieList() {
-        const movieListSection = document.getElementById('movieList');
-        movieListSection.innerHTML = '';
-
-        movies.forEach(movie => {
-            const movieElement = createMovieElement(movie);
-            movieListSection.appendChild(movieElement);
-        });
+// Función para manejar la personalización
+function personalizar() {
+    const nombreUsuario = prompt("Ingresa tu nombre:");
+    if (nombreUsuario) {
+        // Verificar si el usuario ingresó un nombre
+        const mensajePersonalizado = document.createElement("p");
+        mensajePersonalizado.textContent = `¡Bienvenido, ${nombreUsuario}! Personaliza tu lista de películas a continuación.`;
+        document.getElementById("personalizacion").appendChild(mensajePersonalizado);
     }
+}
 
-    function createMovieElement(movie) {
-        const movieCard = document.createElement('div');
-        movieCard.classList.add('movie');
-        movieCard.innerHTML = `
-            <img src="${movie.image}" alt="${movie.title}">
-            <h3>${movie.title}</h3>
-            <p>${movie.description}</p>
-        `;
-        return movieCard;
+// Función para agregar una nueva película
+function agregarPelicula(event) {
+    event.preventDefault();
+
+    const titulo = document.getElementById("titulo").value;
+    const director = document.getElementById("director").value;
+    const anio = document.getElementById("anio").value;
+
+    // Validar que los campos no estén vacíos
+    if (titulo && director && anio) {
+        const nuevaPelicula = {
+            titulo,
+            director,
+            anio,
+        };
+
+        // Aquí debes implementar la lógica para agregar la película a la lista y actualizar la interfaz
+
+        // Limpia los campos del formulario
+        document.getElementById("titulo").value = "";
+        document.getElementById("director").value = "";
+        document.getElementById("anio").value = "";
+
+        // Cerrar el modal
+        $('#agregarPeliculaModal').modal('hide');
+    } else {
+        alert("Por favor, completa todos los campos.");
     }
+}
 
-    // Funciones públicas
-    return {
-        init: function () {
-            // Inicialización del módulo
-            movies = [
-                { title: 'Avengers: Endgame', description: 'La batalla final por el universo.', image: 'img/movie1.jpg' },
-                { title: 'Inception', description: '¿Qué es real y qué es un sueño?', image: 'img/movie2.jpg' },
-                // Agrega más películas según sea necesario
-            ];
+// Función para obtener detalles de la película y mostrarlos
+function mostrarDetallesPelicula(tituloPelicula) {
+    // Aquí debes implementar la lógica para obtener detalles de la película y actualizar la interfaz
+}
 
-            // Renderizar la lista inicial
-            renderMovieList();
-        },
+// Event listeners
+document.getElementById("personalizarBtn").addEventListener("click", personalizar);
+document.getElementById("agregarPeliculaForm").addEventListener("submit", agregarPelicula);
 
-        addMovie: function (title, description, image) {
-            // Agregar una nueva película
-            const newMovie = { title, description, image };
-            movies.push(newMovie);
-            renderMovieList();
-        },
-
-        clearMovieList: function () {
-            // Limpiar la lista de películas
-            movies = [];
-            renderMovieList();
-        },
-    };
-})();
-
-// Definición de un módulo para las interacciones de la página principal
-const HomePageModule = (function () {
-    // Variables privadas
-    const addMovieBtn = document.getElementById('addMovieBtn');
-    const clearListBtn = document.getElementById('clearListBtn');
-
-    // Funciones privadas
-    function setupEventListeners() {
-        addMovieBtn.addEventListener('click', showAddMovieModal);
-        clearListBtn.addEventListener('click', CatalogModule.clearMovieList);
-    }
-
-    function showAddMovieModal() {
-        // Lógica para mostrar un modal o formulario para agregar películas
-        const title = prompt('Ingrese el título de la película:');
-        const description = prompt('Ingrese la descripción de la película:');
-        const image = prompt('Ingrese la URL de la imagen de la película:');
-
-        if (title && description && image) {
-            CatalogModule.addMovie(title, description, image);
-        }
-    }
-
-    // Funciones públicas
-    return {
-        init: function () {
-            // Inicialización del módulo de la página principal
-            setupEventListeners();
-        },
-    };
-})();
-
-// Ejecutar la inicialización de los módulos al cargar la página
-document.addEventListener('DOMContentLoaded', function () {
-    CatalogModule.init();
-    HomePageModule.init();
+// Ejemplo de tarjetas de películas con event listeners
+const tarjetasPelicula = document.querySelectorAll(".tarjeta-pelicula");
+tarjetasPelicula.forEach(tarjeta => {
+    tarjeta.addEventListener("click", () => {
+        const tituloPelicula = tarjeta.getAttribute("data-titulo");
+        mostrarDetallesPelicula(tituloPelicula);
+    });
 });
