@@ -18,6 +18,12 @@ body {
     align-items: center;
   }
   
+  .logo {
+    width: 20%; /* Ajusta el tamaño del logo según tus preferencias */
+    max-width: 150px; /* Establece un tamaño máximo para el logo */
+    height: auto; /* Permite que la altura se ajuste proporcionalmente al ancho */
+  }
+  
   nav ul {
     list-style: none;
     display: flex;
@@ -26,7 +32,6 @@ body {
   nav ul li {
     margin-right: 20px;
   }
-  
   /* Estilos específicos para los enlaces en el header */
   nav ul li a {
     text-decoration: none;
