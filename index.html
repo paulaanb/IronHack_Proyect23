@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mi Cinefilia</title>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">Mi Cinefilia</a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="heroSection">
+        <div id="heroContent">
+            <h2>Bienvenido a Mi Cinefilia</h2>
+            <p>Explora nuestro catálogo de películas y encuentra tu próxima película favorita.</p>
+            <a href="catalogo.html" class="ctaButton">Explorar Catálogo</a>
+        </div>
+    </section>
+
+    <section id="featuredMovies">
+        <h2>Películas Destacadas</h2>
+        <div class="movieCard">
+            <img src="img/movie1.jpg" alt="Avengers: Endgame">
+            <h3>Avengers: Endgame</h3>
+            <p>La batalla final por el universo.</p>
+        </div>
+        <div class="movieCard">
+            <img src="img/movie2.jpg" alt="Inception">
+            <h3>Inception</h3>
+            <p>¿Qué es real y qué es un sueño?</p>
+        </div>
+        <!-- Agrega más películas destacadas según sea necesario -->
+    </section>
+
+    <section id="quoteWidget" class="widget">
+        <h2>Frases de Cine</h2>
+        <blockquote>
+            "El cine no trata de qué pasa, sino de cómo se cuenta lo que pasa."
+            <footer>- Billy Wilder</footer>
+        </blockquote>
+    </section>
+
+    <section id="movieCategories">
+        <h2>Categorías Populares</h2>
+        <ul>
+            <li><a href="#">Acción</a></li>
+            <li><a href="#">Drama</a></li>
+            <li><a href="#">Ciencia Ficción</a></li>
+            <li><a href="#">Comedia</a></li>
+            <li><a href="#">Aventura</a></li>
+        </ul>
+    </section>
+
+    <section id="subscribeWidget" class="widget">
+        <h2>Suscríbete a Nuestro Boletín</h2>
+        <p>Recibe las últimas noticias sobre películas, estrenos y más.</p>
+        <form action="#" method="post">
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit" class="ctaButton">Suscribirse</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Mi Cinefilia. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
