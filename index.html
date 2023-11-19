@@ -1,58 +1,75 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>CineManía 2.0</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>CineWorld</title>
 </head>
 <body>
-    <header class="bg-dark text-white text-center py-3">
-        <h1>CineManía 2.0</h1>
-    </header>
-    <main class="container mt-4">
-        <section id="personalizacion" class="mb-4">
-            <button id="personalizarBtn" class="btn btn-primary">Personalizar</button>
-        </section>
-        <section id="peliculas" class="row">
-            <!-- Aquí se agregarán dinámicamente la información de las películas -->
-        </section>
-    </main>
-    <!-- Modal para agregar película -->
-    <div class="modal fade" id="agregarPeliculaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Agregar Película</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form id="agregarPeliculaForm">
-                        <div class="form-group">
-                            <label for="titulo">Título:</label>
-                            <input type="text" class="form-control" id="titulo" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="director">Director:</label>
-                            <input type="text" class="form-control" id="director" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="anio">Año:</label>
-                            <input type="number" class="form-control" id="anio" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Agregar</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+  <header>
+    <img src="images/cineworld-logo.png" alt="CineWorld Logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio">
+    <h1>Bienvenido a CineWorld</h1>
+    <p>Explora el emocionante mundo del cine con nosotros.</p>
+    <div class="widget">
+      <h2>Noticias</h2>
+      <p>¡Mantente actualizado con las últimas noticias cinematográficas!</p>
+    </div>
+    <div class="widget">
+      <h2>Ofertas Especiales</h2>
+      <p>Descubre nuestras ofertas exclusivas para los amantes del cine.</p>
+    </div>
+    <div class="widget">
+      <h2>Próximos Estrenos</h2>
+      <p>No te pierdas los próximos estrenos que tenemos preparados para ti.</p>
+    </div>
+    <button id="personalizarBtn">¡Personaliza tu Experiencia!</button>
+    <p id="nombreUsuario"></p>
+    <div id="preguntas" style="display: none;">
+      <h2>Responde algunas preguntas para personalizar tu experiencia:</h2>
+      <label for="genero">¿Cuál es tu género favorito?</label>
+      <select id="genero">
+        <option value="accion">Acción</option>
+        <option value="comedia">Comedia</option>
+        <option value="drama">Drama</option>
+        <option value="ciencia-ficcion">Ciencia Ficción</option>
+        <option value="otros">Otros</option>
+      </select>
+      <label for="plataforma">¿En qué plataforma prefieres ver películas?</label>
+      <select id="plataforma">
+        <option value="netflix">Netflix</option>
+        <option value="amazon">Amazon Prime Video</option>
+        <option value="hbo">HBO</option>
+        <option value="cine">Cine</option>
+        <option value="otros">Otros</option>
+      </select>
+      <button id="finalizarBtn">Finalizar</button>
+    </div>
+  </section>
+  <footer>
+    <div class="derechos-de-autor">
+      <p>&copy; 2023 CineWorld. Todos los derechos reservados.</p>
+    </div>
+    <div class="enlaces-utiles">
+      <ul>
+        <li><a href="politica-de-privacidad.html">Política de Privacidad</a></li>
+        <li><a href="terminos-y-condiciones.html">Términos y Condiciones</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>

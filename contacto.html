@@ -1,0 +1,62 @@
+<!-- contacto.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Contacto - CineWorld</title>
+</head>
+<body>
+
+  <header>
+    <img src="images/cineworld-logo.png" alt="CineWorld Logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="contacto">
+    <h1>Contacto</h1>
+    
+    <div class="informacion-contacto">
+      <p>Correo Electrónico: info@cineworld.com</p>
+      <p>Teléfono: +1 123-456-7890</p>
+      <p>Dirección: Calle de las Películas, Ciudad del Cine</p>
+    </div>
+
+    <h2>¿Tienes alguna pregunta o comentario?</h2>
+
+    <form id="formulario-contacto">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="correo">Correo Electrónico:</label>
+      <input type="email" id="correo" name="correo" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+      <button type="submit">Enviar Mensaje</button>
+    </form>
+  </section>
+  <footer>
+    <div class="derechos-de-autor">
+      <p>&copy; 2023 CineWorld. Todos los derechos reservados.</p>
+    </div>
+    <div class="enlaces-utiles">
+      <ul>
+        <li><a href="politica-de-privacidad.html">Política de Privacidad</a></li>
+        <li><a href="terminos-y-condiciones.html">Términos y Condiciones</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

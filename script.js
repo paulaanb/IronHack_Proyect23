@@ -1,58 +1,45 @@
-// Función para manejar la personalización
-function personalizar() {
-    const nombreUsuario = prompt("Ingresa tu nombre:");
-    if (nombreUsuario) {
-        // Verificar si el usuario ingresó un nombre
-        const mensajePersonalizado = document.createElement("p");
-        mensajePersonalizado.textContent = `¡Bienvenido, ${nombreUsuario}! Personaliza tu lista de películas a continuación.`;
-        document.getElementById("personalizacion").appendChild(mensajePersonalizado);
-    }
-}
+// script.js
 
-// Función para agregar una nueva película
-function agregarPelicula(event) {
-    event.preventDefault();
-
-    const titulo = document.getElementById("titulo").value;
-    const director = document.getElementById("director").value;
-    const anio = document.getElementById("anio").value;
-
-    // Validar que los campos no estén vacíos
-    if (titulo && director && anio) {
-        const nuevaPelicula = {
-            titulo,
-            director,
-            anio,
-        };
-
-        // Aquí debes implementar la lógica para agregar la película a la lista y actualizar la interfaz
-
-        // Limpia los campos del formulario
-        document.getElementById("titulo").value = "";
-        document.getElementById("director").value = "";
-        document.getElementById("anio").value = "";
-
-        // Cerrar el modal
-        $('#agregarPeliculaModal').modal('hide');
-    } else {
-        alert("Por favor, completa todos los campos.");
-    }
-}
-
-// Función para obtener detalles de la película y mostrarlos
-function mostrarDetallesPelicula(tituloPelicula) {
-    // Aquí debes implementar la lógica para obtener detalles de la película y actualizar la interfaz
-}
-
-// Event listeners
-document.getElementById("personalizarBtn").addEventListener("click", personalizar);
-document.getElementById("agregarPeliculaForm").addEventListener("submit", agregarPelicula);
-
-// Ejemplo de tarjetas de películas con event listeners
-const tarjetasPelicula = document.querySelectorAll(".tarjeta-pelicula");
-tarjetasPelicula.forEach(tarjeta => {
-    tarjeta.addEventListener("click", () => {
-        const tituloPelicula = tarjeta.getAttribute("data-titulo");
-        mostrarDetallesPelicula(tituloPelicula);
+document.addEventListener('DOMContentLoaded', function() {
+    // Personalización del Usuario
+    document.getElementById('personalizarBtn').addEventListener('click', function() {
+      var nombreUsuario = prompt('Por favor, ingresa tu nombre:');
+      if (nombreUsuario !== null && nombreUsuario !== '') {
+        document.getElementById('nombreUsuario').innerText = '¡Hola, ' + nombreUsuario + '!';
+        document.getElementById('preguntas').style.display = 'block';
+      }
     });
-});
+  
+    // Recopilar información sobre preferencias del usuario
+    document.getElementById('finalizarBtn').addEventListener('click', function() {
+      var genero = document.getElementById('genero').value;
+      var plataforma = document.getElementById('plataforma').value;
+  
+      // Realizar recomendaciones según las preferencias del usuario
+      if (genero === 'accion' && plataforma === 'netflix') {
+        alert('Te recomendamos películas de acción en Netflix. ¡Disfruta!');
+        redirigir('https://www.netflix.com/browse/genre/1365');
+      } else if (genero === 'comedia' && plataforma === 'amazon') {
+        alert('Te recomendamos comedias en Amazon Prime Video. ¡Diviértete!');
+        redirigir('https://www.amazon.com/gp/video/storefront');
+      } else if (genero === 'drama' && plataforma === 'cine') {
+        alert('Te recomendamos dramas en el cine. ¡Prepárate para una experiencia emotiva!');
+        redirigir('https://www.google.com/search?q=dramas+en+cine');
+      } else {
+        alert('Gracias por personalizar tu experiencia. ¡Disfruta del cine!');
+      }
+    });
+  
+    // Función para redirigir a la URL proporcionada
+    function redirigir(url) {
+      window.location.href = url;
+    }
+  
+    // Cambios de Color
+    document.getElementById('cambiarColorBtn').addEventListener('click', function() {
+      var colores = ['#ffcccb', '#b3e6ff', '#ffd700', '#c2f0c2'];
+      var colorAleatorio = colores[Math.floor(Math.random() * colores.length)];
+      document.body.style.backgroundColor = colorAleatorio;
+    });
+  });
+  
