@@ -84,4 +84,26 @@ body {
   #contacto {
     background-color: #D4E6F1 ; /* Color de fondo para la sección de contacto */
   }
-  
+ /* Estilos generales para pantallas grandes */
+body {
+  font-size: 16px;
+}
+
+/* Media query para pantallas más pequeñas, como tablets */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Media query para pantallas aún más pequeñas, como móviles */
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+ 
