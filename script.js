@@ -41,44 +41,4 @@ document.addEventListener('DOMContentLoaded', function() {
     var colorAleatorio = colores[Math.floor(Math.random() * colores.length)];
     document.body.style.backgroundColor = colorAleatorio;
   });
-
-// Nuevas funciones
-  function cambiarColorFondo() {
-    var colores = ['#ffcccb', '#b3e6ff', '#ffd700', '#c2f0c2'];
-    var colorAleatorio = colores[Math.floor(Math.random() * colores.length)];
-    document.body.style.backgroundColor = colorAleatorio;
-  }
-
-  function mostrarElemento(id) {
-    document.getElementById(id).style.display = 'block';
-  }
-
-  function ocultarElemento(id) {
-    document.getElementById(id).style.display = 'none';
-  }
-
-  function personalizarExperiencia() {
-    var nombre = prompt('¡Hola! Por favor, introduce tu nombre:');
-    if (nombre) {
-      var gustos = prompt(`Hola ${nombre}! ¿Cuáles son tus gustos?`);
-      var mensaje = `Bienvenido ${nombre}! Disfruta de las películas según tus gustos: ${gustos}`;
-      alert(mensaje);
-    }
-  }
-  function mostrarOcultarElemento(id) {
-    var elemento = document.getElementById(id);
-    if (elemento.style.display === 'none') {
-      elemento.style.display = 'block';
-    } else {
-      elemento.style.display = 'none';
-    }
-  }
-  function personalizarPlataforma() {
-    var plataforma = prompt('¿Qué plataforma prefieres?');
-    if (plataforma) {
-      var mensaje = `¡Genial! Disfruta de las películas en ${plataforma}`;
-      alert(mensaje);
-    }
-  }
-
 });

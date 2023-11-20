@@ -3,107 +3,109 @@
 /* Estilos generales */
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #BDC3C7  
-  }
-  
-  header {
-    background-color: #333;
-    color: white;
-    padding: 1em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    width: 20%; /* Ajusta el tamaño del logo según tus preferencias */
-    max-width: 150px; /* Establece un tamaño máximo para el logo */
-    height: auto; /* Permite que la altura se ajuste proporcionalmente al ancho */
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-  }
-  
-  nav ul li {
-    margin-right: 20px;
-  }
-  /* Estilos específicos para los enlaces en el header */
-  nav ul li a {
-    text-decoration: none;
-    color: white;
-    padding: 0.5em 1em;
-    border-radius: 5px;
-  }
-  
-  /* Cambia el color de fondo al pasar el ratón sobre los enlaces */
-  nav ul li a:hover {
-    background-color: #555;
-  }
-  
-  /* Estilos para el formulario */
-  
-  form {
-    display: grid;
-    gap: 10px;
-  }
-  
-  label {
-    font-weight: bold;
-  }
-  
-  textarea {
-    resize: vertical;
-  }
-  
-  /* Nuevos estilos para la página de contacto */
-  
-  .informacion-contacto {
-    margin-bottom: 20px;
-  }
-  
-  .informacion-contacto p {
-    margin: 0;
-  }
-  
-  /* Estilos específicos para la página de inicio */
-  #inicio {
-    background-color: #e6f7ff; /* Color de fondo para la sección de inicio */
-  }
-  
-  /* Estilos específicos para la página de catálogo */
-  #catalogo {
-    background-color: #D4EFDF     ; /* Color de fondo para la sección de catálogo */
-  }
-  
-  /* Estilos específicos para la página de contacto */
-  #contacto {
-    background-color: #D4E6F1 ; /* Color de fondo para la sección de contacto */
-  }
- /* Estilos generales para pantallas grandes */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #BDC3C7  
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 20%; /* Ajusta el tamaño del logo según tus preferencias */
+  max-width: 150px; /* Establece un tamaño máximo para el logo */
+  height: auto; /* Permite que la altura se ajuste proporcionalmente al ancho */
+}
+
+.images {
+  width: 20%; /* Ajusta el tamaño de la imagen según tus preferencias */
+  max-width: 150px; /* Establece un tamaño máximo para la imagen */
+  height: auto; /* Permite que la altura se ajuste proporcionalmente al ancho */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+/* Estilos específicos para los enlaces en el header */
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+}
+
+/* Cambia el color de fondo al pasar el ratón sobre los enlaces */
+nav ul li a:hover {
+  background-color: #555;
+}
+
+/* Estilos para el formulario */
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Nuevos estilos para la página de contacto */
+
+.informacion-contacto {
+  margin-bottom: 20px;
+}
+
+.informacion-contacto p {
+  margin: 0;
+}
+
+/* Estilos específicos para la página de inicio */
+#inicio {
+  background-color: #e6f7ff; /* Color de fondo para la sección de inicio */
+}
+
+/* Estilos específicos para la página de catálogo */
+#catalogo {
+  background-color: #D4EFDF     ; /* Color de fondo para la sección de catálogo */
+}
+
+/* Estilos específicos para la página de contacto */
+#contacto {
+  background-color: #D4E6F1 ; /* Color de fondo para la sección de contacto */
+}
+/* Estilos generales para pantallas grandes */
 body {
-  font-size: 16px;
+font-size: 16px;
 }
 
 /* Media query para pantallas más pequeñas, como tablets */
 @media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
+body {
+  font-size: 14px;
+}
 }
 
 /* Media query para pantallas aún más pequeñas, como móviles */
 @media (max-width: 480px) {
-  body {
-    font-size: 12px;
-  }
+body {
+  font-size: 12px;
 }
-img {
-  max-width: 100%;
-  height: auto;
 }
- 
+
