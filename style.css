@@ -18,6 +18,36 @@ header {
   align-items: center;
 }
 
+footer {
+  background-color: #f8f9fa;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.derechos-de-autor,
+.enlaces-utiles {
+  margin-bottom: 10px;
+}
+
+.enlaces-utiles ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.enlaces-utiles li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+
+.enlaces-utiles a {
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+}
+
+
+
 .logo {
   width: 20%; /* Ajusta el tamaño del logo según tus preferencias */
   max-width: 150px; /* Establece un tamaño máximo para el logo */
@@ -30,6 +60,11 @@ header {
   height: auto; /* Permite que la altura se ajuste proporcionalmente al ancho */
 }
 
+.noticia {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
 
 nav ul {
   list-style: none;
@@ -49,7 +84,7 @@ nav ul li a {
 
 /* Cambia el color de fondo al pasar el ratón sobre los enlaces */
 nav ul li a:hover {
-  background-color: #555;
+  background-color: #9c0404;
 }
 
 /* Estilos para el formulario */
@@ -67,14 +102,63 @@ textarea {
   resize: vertical;
 }
 
-/* Nuevos estilos para la página de contacto */
-
-.informacion-contacto {
-  margin-bottom: 20px;
+#contacto {
+  text-align: center;
+  padding: 40px 0;
 }
 
-.informacion-contacto p {
-  margin: 0;
+.contacto-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.informacion-contacto {
+  margin-bottom: 40px;
+}
+
+.formulario-contacto {
+  margin-bottom: 40px;
+}
+
+.formulario-contacto form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formulario-contacto label,
+.formulario-contacto input,
+.formulario-contacto textarea {
+  margin-bottom: 10px;
+}
+
+.formulario-contacto button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.redes-sociales {
+  margin-bottom: 40px;
+}
+
+.redes-sociales ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.redes-sociales li {
+  margin: 0 10px;
+}
+
+.redes-sociales a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /* Estilos específicos para la página de inicio */
@@ -139,5 +223,7 @@ h1 {
   max-width: 100%;
   height: auto;
 }
-
+#miElemento {
+  display: none;
+}
 
