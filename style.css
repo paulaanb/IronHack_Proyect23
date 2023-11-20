@@ -30,6 +30,7 @@ header {
   height: auto; /* Permite que la altura se ajuste proporcionalmente al ancho */
 }
 
+
 nav ul {
   list-style: none;
   display: flex;
@@ -108,4 +109,35 @@ body {
   font-size: 12px;
 }
 }
+
+#catalogo {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+h1 {
+  margin-bottom: 20px; /* Ajusta el espacio entre el título y las películas */
+}
+
+.pelicula-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.pelicula {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #232222;
+  text-align: center;
+}
+
+.pelicula img {
+  max-width: 100%;
+  height: auto;
+}
+
 
