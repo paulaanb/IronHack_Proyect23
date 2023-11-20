@@ -9,7 +9,6 @@
   <title>CineWorld</title>
 </head>
 <body>
-
   <header>
     <img src="images/cineworld-logo.png" alt="CineWorld Logo" class="logo">
     <nav>
@@ -24,9 +23,14 @@
   <section id="inicio">
     <h1>Bienvenido a CineWorld</h1>
     <p>Explora el emocionante mundo del cine con nosotros.</p>
+    <button onclick="cambiarColorFondo()">Cambiar Color de Fondo</button>
     <div class="widget">
       <h2>Noticias</h2>
       <p>¡Mantente actualizado con las últimas noticias cinematográficas!</p>
+      <button onclick="agregarNoticia()">Añadir Noticia</button>
+      <div id="contenedorNoticias"></div>
+      <button onclick="ocultarElemento('miElemento')">Ocultar Noticia</button>
+      <div id="miElemento"></div>
     </div>
     <div class="widget">
       <h2>Ofertas Especiales</h2>
@@ -36,7 +40,9 @@
       <h2>Próximos Estrenos</h2>
       <p>No te pierdas los próximos estrenos que tenemos preparados para ti.</p>
     </div>
+
     <button id="personalizarBtn">¡Personaliza tu Experiencia!</button>
+
     <p id="nombreUsuario"></p>
     <div id="preguntas" style="display: none;">
       <h2>Responde algunas preguntas para personalizar tu experiencia:</h2>
@@ -54,13 +60,11 @@
         <option value="amazon">Amazon Prime Video</option>
         <option value="hbo">HBO</option>
         <option value="cine">Cine</option>
-        <option value="otros">Otros</option>
       </select>
-      <button id="finalizarBtn">Finalizar</button>
+      <button id="finalizarBtn" onclick="finalizarPersonalizacion()">Finalizar</button>
     </div>
   </section>
-    <a href="https://paulaanb.github.io/IronHack_Proyect23/">Visita mi página web</a>
-  </section>
+
   <footer>
     <div class="derechos-de-autor">
       <p>&copy; 2023 CineWorld. Todos los derechos reservados.</p>
@@ -69,6 +73,8 @@
       <ul>
         <li><a href="politica-de-privacidad.html">Política de Privacidad</a></li>
         <li><a href="terminos-y-condiciones.html">Términos y Condiciones</a></li>
+        <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+        <li><a href="soporte-tecnico.html">Soporte Técnico</a></li>
       </ul>
     </div>
   </footer>
